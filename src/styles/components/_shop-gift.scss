@@ -1,0 +1,19 @@
+.shop-gift {
+  border-bottom: 0.5px solid #ccc;
+}
+
+.shop-gift__script {
+  .shop-gift__des,
+  .shop-gift__demo {
+    @include script;
+  }
+  .shop-gift__btn {
+    @include button($primary-color) {
+      display: block;
+      width: 100%;
+    }
+  }
+  .shop-gift__viewdetail {
+    @include link;
+  }
+}

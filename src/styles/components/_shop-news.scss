@@ -1,0 +1,20 @@
+.shop-news__card {
+  & > * {
+    display: block;
+  }
+  .shop-news__img {
+    @include zoomImg;
+  }
+
+  .shop-news__des {
+    @include script;
+  }
+
+  .shop-news__readmore {
+    @include link;
+  }
+}
+
+.shop-news__btn {
+  @include button($primary-color);
+}

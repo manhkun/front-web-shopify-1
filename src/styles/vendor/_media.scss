@@ -1,0 +1,106 @@
+@media (min-width: 576px) {
+  .shop-news__card:last-child {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-aside {
+    .currency-btn button {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-bottom {
+    width: 100%;
+    .nav-list {
+      position: initial;
+      background-color: transparent;
+
+      width: initial;
+      height: initial;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .close-btn {
+        display: none;
+      }
+
+      .nav-item {
+        border-bottom: unset;
+        padding: unset;
+        margin: 0 30px;
+
+        cursor: pointer;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: #000;
+          transition: width 500ms;
+        }
+        &:hover::before {
+          width: 100%;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+  .expand-body__btn,
+  .expand-skincare__btn {
+    .fa-minus {
+      display: none;
+    }
+    .fa-plus {
+      display: none;
+    }
+  }
+  .navbar-top {
+    .hamburger-menu {
+      .fa-bars {
+        display: none;
+      }
+      button[type="menu"] {
+        display: initial;
+      }
+    }
+    .item-menu {
+      .fa-search,
+      .fa-shopping-bag {
+        display: none;
+      }
+      .item-menu__text {
+        display: initial;
+      }
+    }
+  }
+
+  .nav-expand {
+    .nav-expand__skincare,
+    .nav-expand__body {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 200px;
+    }
+  }
+
+  .shop-look__info > *:not(:last-child) {
+    display: block;
+  }
+
+  .shop-story {
+    height: 515px;
+  }
+  .shop-news__card:last-child {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,48 @@
+@mixin button($color) {
+  color: $text-color;
+  font-weight: 700;
+  background: linear-gradient(to right, transparent 50%, $color 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+
+  font-size: 16px;
+
+  width: fit-content;
+
+  padding: 10px 15px;
+
+  text-align: center;
+
+  &:hover {
+    border: 0.5px solid $color;
+    background-position: left bottom;
+    color: $color;
+  }
+  @content;
+}
+
+@mixin script {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@mixin link {
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+@mixin zoomImg {
+  overflow: hidden;
+  img {
+    transition: opacity 0.3s ease,
+      transform 8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    &:hover {
+      cursor: pointer;
+
+      transform: scale(2);
+    }
+  }
+}

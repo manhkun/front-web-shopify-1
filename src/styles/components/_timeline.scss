@@ -1,0 +1,48 @@
+.shop-timeline {
+  border-bottom: 0.5px solid #ccc;
+}
+
+.shop-story {
+  height: 400px;
+}
+.shop-story__img {
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.shop-story__script {
+  p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.shop-timeline__nav {
+  & > * {
+    font-size: 15px;
+    font-weight: 700;
+
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  & > *.active {
+    font-size: 20px;
+    opacity: 1;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: #000;
+
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}

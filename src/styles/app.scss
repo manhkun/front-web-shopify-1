@@ -1,0 +1,16 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~swiper/swiper-bundle.css";
+@import "./base/variable";
+@import "./base/base";
+@import "./vendor/mixin";
+@import "./layouts/header";
+@import "./components/carousel";
+@import "./components/products";
+@import "./components/collection";
+@import "./components/shop-look";
+@import "./components/timeline";
+@import "./components/shop-gift";
+@import "./components/shop-news";
+@import "./components/shop-hero";
+@import "./layouts/footer";
+@import "./vendor/media";

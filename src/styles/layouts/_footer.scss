@@ -1,0 +1,50 @@
+.footer-text {
+  p {
+    @include script;
+  }
+}
+
+.footer-links {
+  list-style: none;
+  li {
+    margin: 5px 0;
+    @include script;
+    a {
+      color: #000;
+    }
+  }
+}
+
+.footer-newsletter {
+  p {
+    @include script;
+  }
+  input[type="email"] {
+    padding: 10px;
+    border: 0.5px solid #ccc;
+    display: block;
+
+    width: 100%;
+  }
+  input[type="submit"] {
+    border: none;
+    margin-top: 20px;
+    @include button($primary-color) {
+      padding: 10px 20px;
+    }
+  }
+}
+
+.footer-aside {
+  .currency-btn button {
+    background: transparent;
+    border: none;
+    margin-bottom: 10px;
+  }
+  .currency-method {
+    list-style: none;
+    li {
+      margin-right: 10px;
+    }
+  }
+}

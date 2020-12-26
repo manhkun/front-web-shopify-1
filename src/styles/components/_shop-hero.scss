@@ -1,0 +1,22 @@
+.shop-hero__container {
+  height: 500px;
+  width: 100%;
+
+  background-image: url("/images/photo-parallax_1500x.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+
+  .shop-hero__content {
+    background: #fff;
+    width: 380px;
+    height: 200px;
+
+    .shop-hero__title {
+      font-weight: 700;
+    }
+    .shop-hero__script {
+      @include script;
+    }
+  }
+}

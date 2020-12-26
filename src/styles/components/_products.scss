@@ -1,0 +1,126 @@
+.products-yourskin {
+  border-bottom: 0.5px solid #ccc;
+}
+.products-nav {
+  .products-nav__item {
+    cursor: pointer;
+  }
+}
+
+.nav-item__active {
+  position: relative;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+
+    background-color: #000;
+
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+  }
+}
+
+.product-card {
+  position: relative;
+  &__title {
+    cursor: pointer;
+    margin-top: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  &__img {
+    cursor: pointer;
+    .product-overview {
+      max-width: 100%;
+      object-fit: cover;
+    }
+    .product-viewdetail {
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 650ms;
+    }
+    &:hover {
+      .product-viewdetail {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__price {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 350ms ease-in-out;
+  }
+
+  &:hover {
+    .product-card__price {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.product-card.product-sold::before {
+  content: "SOLD OUT";
+  font-size: 14px;
+
+  padding: 3px 10px;
+
+  color: #000;
+
+  background-color: #fff;
+
+  position: absolute;
+  top: 10px;
+  left: 15%;
+}
+
+.products-btn {
+  @include button($primary-color) {
+    padding: 15px;
+  }
+}
+
+.product-fatiguedskin__img {
+  img {
+    cursor: pointer;
+  }
+}
+
+.product-fatiguedskin__des {
+  font-size: 14px;
+  font-weight: 500;
+
+  .product-fatiguedskin__colors {
+    .product-fatiguedskin__color {
+      img {
+        width: 40px;
+        padding: 3px;
+
+        cursor: pointer;
+      }
+      .color-active {
+        border: 0.5px solid #000;
+      }
+    }
+  }
+  .product-fatiguedskin__button {
+    @include button($primary-color) {
+      display: block;
+      margin: 10px 0px;
+      width: 100%;
+    }
+  }
+
+  .product-fatiguedskin__link {
+    color: #000;
+    text-decoration: underline;
+  }
+}
