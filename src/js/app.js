@@ -7,3 +7,4 @@ import "@fortawesome/fontawesome-free/js/brands";
 import "./header/toggle";
 import "./header/navbar";
 import "./header/carousel";
+import "./component/products";

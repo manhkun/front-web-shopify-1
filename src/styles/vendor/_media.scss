@@ -81,6 +81,12 @@
         display: initial;
       }
     }
+    .logo {
+      .logo-black,
+      .logo-white {
+        left: -50px;
+      }
+    }
   }
 
   .nav-expand {

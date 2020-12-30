@@ -41,10 +41,10 @@ header {
     }
     .logo {
       .logo-black {
-        opacity: 1;
+        display: initial;
       }
       .logo-white {
-        opacity: 0;
+        display: none;
       }
     }
   }
@@ -65,14 +65,11 @@ header {
     }
   }
   .logo {
-    position: relative;
-    .logo-black,
-    .logo-white {
-      position: absolute;
-      top: -15px;
-    }
     .logo-black {
-      opacity: 0;
+      display: none;
+    }
+    .logo-white {
+      display: initial;
     }
   }
 }
@@ -154,10 +151,10 @@ header {
   border-bottom: 0.5px solid #ccc;
   .logo {
     .logo-black {
-      opacity: 1;
+      display: initial;
     }
     .logo-white {
-      opacity: 0;
+      display: none;
     }
   }
 }

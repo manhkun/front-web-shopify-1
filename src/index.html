@@ -16,16 +16,16 @@
                 <p class="announcement__content">GET €10 OFF ON YOUR FIRST ORDER!</p>
             </div>
             <nav class="navbar">
-                <div class="navbar-top w-100 p-2 d-flex justify-content-between align-items-center">
-                    <div class="hamburger-menu">
+                <div class="navbar-top w-100 p-2 row">
+                    <div class="hamburger-menu col-4">
                         <i class="fa fa-bars" aria-hidden="true"></i>
                         <button type="menu">USD$</button>
                     </div>
-                    <a class="logo" href="">
+                    <a class="logo col-4 d-flex justify-content-center" href="">
                         <img class="logo-white" src="./images/logo-white_180x.png" alt="">
                         <img class="logo-black" src="./images/logo-black_180x.png" alt="">
                     </a>
-                    <div class="item-menu">
+                    <div class="item-menu col-4 d-flex justify-content-end">
                         <i class="fa fa-search mr-3" aria-hidden="true"></i>
                         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                         <a class="item-menu__text" href="">ACCOUNT</a>
@@ -113,41 +113,84 @@
             <div class="container-fluid text-center mt-5 p-5">
                 <p>FOR YOUR SKIN</p>
                 <div class="products-nav d-flex justify-content-center mb-5">
-                    <h3 class="products-nav__item nav-item__active mr-5">MASQUES</h3>
-                    <h3 class="products-nav__item">LIPS</h3>
+                    <h3 class="products-nav__item nav-item__active mr-5" id="products-nav__masques">MASQUES</h3>
+                    <h3 class="products-nav__item" id="products-nav__lips">LIPS</h3>
                 </div>
-                <div class="product-card__masques">
+                <div class="product-cards" id="product-cards__masques">
                     <div class="row">
                         <div class="product-card col-12 col-md-6 col-lg-4 col-xl-3">
                             <div class="product-card__img">
-                                <img class="product-viewdetail" src="./images/product1-detail.jpg" alt="">
                                 <img class="product-overview" src="./images/product1.jpg" alt="">
+                                <img class="product-viewdetail" src="./images/product1-detail.jpg" alt="">
                             </div>
                             <p class="product-card__title">BALI PAPAYA RICE MASQUE</p>
                             <p class="product-card__price">$52</p>
                         </div>
                         <div class="product-card product-sold col-12 col-md-6 col-lg-4 col-xl-3">
                             <div class="product-card__img">
-                                <img class="product-viewdetail" src="./images/product2-detail.jpg" alt="">
                                 <img class="product-overview" src="./images/product2.jpg" alt="">
+                                <img class="product-viewdetail" src="./images/product2-detail.jpg" alt="">
                             </div>
                             <p class="product-card__title">EGYPTIAN HONEY ROSE MASQUE</p>
                             <p class="product-card__price">$52</p>
                         </div>
                         <div class="product-card col-12 col-md-6 col-lg-4 col-xl-3">
                             <div class="product-card__img">
-                                <img class="product-viewdetail" src="./images/product3-detail.jpg" alt="">
                                 <img class="product-overview" src="./images/product3.jpg" alt="">
+                                <img class="product-viewdetail" src="./images/product3-detail.jpg" alt="">
                             </div>
                             <p class="product-card__title">BRAZILIAN SUPERMASK MASQUE</p>
                             <p class="product-card__price">$52</p>
                         </div>
                         <div class="product-card col-12 col-md-6 col-lg-4 col-xl-3">
                             <div class="product-card__img">
-                                <img class="product-viewdetail" src="./images/product4-detail.jpg" alt="">
                                 <img class="product-overview" src="./images/product4.jpg" alt="">
+                                <img class="product-viewdetail" src="./images/product4-detail.jpg" alt="">
                             </div>
                             <p class="product-card__title">GLACIAL COAST DETOX MASQUE</p>
+                            <p class="product-card__price">$52</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-cards" id="product-cards__lips" hidden>
+                    <div class="row">
+                        <div class="product-card col-12 col-md-6 col-lg-4 col-xl-3">
+                            <div class="product-card__img">
+                                <img class="product-overview" src="./images/Grapefruit-Anise-Lip-Balm-Tin_400x.jpg"
+                                    alt="">
+                                <img class="product-viewdetail"
+                                    src="./images/Grapefruit-Anise-Lip-Balm-Opened-Tin_300x.jpg" alt="">
+                            </div>
+                            <p class="product-card__title">GRAPEFRUIT ANISE LIP BALM</p>
+                            <p class="product-card__price">$52</p>
+                        </div>
+                        <div class="product-card product-sold col-12 col-md-6 col-lg-4 col-xl-3">
+                            <div class="product-card__img">
+                                <img class="product-overview" src="./images/Honey-Marshmallow-Lip-Masque-Tin_400x.jpg"
+                                    alt="">
+                                <img class="product-viewdetail"
+                                    src="./images/Honey-Marshmallow-Lip-Masque-Opened-Tin_300x.jpg" alt="">
+                            </div>
+                            <p class="product-card__title">HONEY MARSHMALLOW LIP MASQUE</p>
+                            <p class="product-card__price">$52</p>
+                        </div>
+                        <div class="product-card col-12 col-md-6 col-lg-4 col-xl-3">
+                            <div class="product-card__img">
+                                <img class="product-overview" src="./images/Cinnamon-Sage-Lip-Balm-Tin_400x.jpg" alt="">
+                                <img class="product-viewdetail"
+                                    src="./images/Cinnamon-Sage-Lip-Balm-Opened-Tin_300x.jpg" alt="">
+                            </div>
+                            <p class="product-card__title">CINNAMON SAGE LIP BALM</p>
+                            <p class="product-card__price">$52</p>
+                        </div>
+                        <div class="product-card col-12 col-md-6 col-lg-4 col-xl-3">
+                            <div class="product-card__img">
+                                <img class="product-overview" src="./images/Mint-Clementine-Lip-Balm-Tin_400x.jpg"
+                                    alt="">
+                                <img class="product-viewdetail"
+                                    src="./images/Mint-Clementine-Lip-Balm-Opened-Tin_300x.jpg" alt="">
+                            </div>
+                            <p class="product-card__title">MINT CLEMENTINE LIP BALM</p>
                             <p class="product-card__price">$52</p>
                         </div>
                     </div>

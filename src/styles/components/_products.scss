@@ -19,11 +19,13 @@
     position: absolute;
     left: 0;
     bottom: -5px;
+    transition: all 650ms;
   }
 }
 
 .product-card {
   position: relative;
+  height: 500px;
   &__title {
     cursor: pointer;
     margin-top: 10px;
@@ -33,10 +35,18 @@
     letter-spacing: 2px;
   }
   &__img {
+    height: 80%;
     cursor: pointer;
+
+    position: relative;
     .product-overview {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
       max-width: 100%;
       object-fit: cover;
+      opacity: 1;
     }
     .product-viewdetail {
       object-fit: cover;
@@ -45,6 +55,8 @@
       left: 0;
       opacity: 0;
       transition: opacity 650ms;
+      height: 100%;
+      max-width: 100%;
     }
     &:hover {
       .product-viewdetail {

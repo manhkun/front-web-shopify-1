@@ -10,5 +10,3 @@
 ### Publish
 
 > Run `npm run build`
-
-### Happy Coding, kmacoders !
