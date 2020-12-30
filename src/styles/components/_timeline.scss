@@ -21,28 +21,38 @@
   }
 }
 
-.shop-timeline__nav {
-  & > * {
+.swiper-pagination.timeline-pagination {
+  position: unset;
+  margin-top: 70px;
+  .swiper-pagination-bullet {
     font-size: 15px;
     font-weight: 700;
 
     opacity: 0.8;
     cursor: pointer;
-  }
-
-  & > *.active {
-    font-size: 20px;
-    opacity: 1;
-    position: relative;
+    display: unset;
+    border-radius: unset;
+    background: unset;
 
     &::before {
       content: "";
-      width: 100%;
-      height: 3px;
+      width: 0px;
+      height: 4px;
       background-color: #000;
 
       position: absolute;
-      bottom: 0;
+      bottom: -5px;
+      transition: width 300ms;
+    }
+    &.swiper-pagination-bullet-active {
+      font-size: 20px;
+      opacity: 1;
+      position: relative;
+      background-color: unset;
+
+      &::before {
+        width: 100%;
+      }
     }
   }
 }

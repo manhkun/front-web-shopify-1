@@ -8,3 +8,4 @@ import "./header/toggle";
 import "./header/navbar";
 import "./header/carousel";
 import "./component/products";
+import "./component/shop-timeline";

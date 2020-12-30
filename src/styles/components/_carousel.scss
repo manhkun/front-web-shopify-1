@@ -1,91 +1,91 @@
-.swiper-container {
+.swiper-container.carousel-slide {
   width: 100%;
   height: calc(100vh - 40px);
-}
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
 
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
 
-  position: relative;
+    position: relative;
 
-  img {
-    width: 100%;
-    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
 
-    object-fit: cover;
-  }
+      object-fit: cover;
+    }
 
-  &::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.5);
+    &::before {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5);
 
-    width: 100%;
-    height: 100%;
+      width: 100%;
+      height: 100%;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
-
-.swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-
-  background-color: transparent;
-
-  border: 2px solid #fff;
-
-  opacity: 1;
-
-  &.swiper-pagination-bullet-active {
-    background-color: #fff;
-  }
-}
-
-.swiper-caption {
-  position: absolute;
-
-  height: 100px;
-
-  color: #fff;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  &.swiper-caption__odd {
-    text-align: left;
-    left: 50px;
-    bottom: 150px;
-  }
-
-  &.swiper-caption__even {
-    align-self: center;
-    justify-self: center;
-
-    a {
-      align-self: center;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 
-  a {
-    @include button(#fff);
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+
+    background-color: transparent;
+
+    border: 2px solid #fff;
+
+    opacity: 1;
+
+    &.swiper-pagination-bullet-active {
+      background-color: #fff;
+    }
+  }
+
+  .swiper-caption {
+    position: absolute;
+
+    height: 100px;
+
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &.swiper-caption__odd {
+      text-align: left;
+      left: 50px;
+      bottom: 150px;
+    }
+
+    &.swiper-caption__even {
+      align-self: center;
+      justify-self: center;
+
+      a {
+        align-self: center;
+      }
+    }
+
+    a {
+      @include button(#fff);
+    }
   }
 }

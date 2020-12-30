@@ -4,7 +4,7 @@ import anime from "animejs/lib/anime.es.js";
 
 Swiper.use([Navigation, Pagination, Autoplay, EffectFade]);
 
-var swiper = new Swiper(".swiper-container", {
+var swiper = new Swiper(".swiper-container.carousel-slide", {
   slidesPerView: 1,
   spaceBetween: 0,
   effect: "fade",

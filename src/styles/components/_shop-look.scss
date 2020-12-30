@@ -7,6 +7,25 @@
 }
 
 .shop-look__info {
+  .shop-look__infimg {
+    height: 60%;
+    width: 100%;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .info-img__detail {
+      opacity: 0;
+    }
+    &:hover {
+      cursor: pointer;
+      .info-img__detail {
+        opacity: 1;
+      }
+    }
+  }
   .shop-look__btn {
     @include button($primary-color);
   }

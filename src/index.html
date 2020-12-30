@@ -68,7 +68,7 @@
                     </ul>
                 </div>
             </nav>
-            <div class="swiper-container">
+            <div class="swiper-container carousel-slide">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="./images/hero1.jpg" alt="">
@@ -116,7 +116,7 @@
                     <h3 class="products-nav__item nav-item__active mr-5" id="products-nav__masques">MASQUES</h3>
                     <h3 class="products-nav__item" id="products-nav__lips">LIPS</h3>
                 </div>
-                <div class="product-cards" id="product-cards__masques">
+                <div class="product-cards isactive" id="product-cards__masques">
                     <div class="row">
                         <div class="product-card col-12 col-md-6 col-lg-4 col-xl-3">
                             <div class="product-card__img">
@@ -152,7 +152,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-cards" id="product-cards__lips" hidden>
+                <div class="product-cards" id="product-cards__lips">
                     <div class="row">
                         <div class="product-card col-12 col-md-6 col-lg-4 col-xl-3">
                             <div class="product-card__img">
@@ -288,8 +288,12 @@
                         <img class="img-fluid p-5" src="./images/shop-hair_600x.progressive.jpg" alt="">
                     </div>
                     <div class="shop-look__info col-12 col-lg-4 d-lg-flex flex-lg-column align-items-center p-lg-5">
-                        <img class="img-fluid" src="./images/Artifact-Mer-Mer-Monoi-Glossy-Mane-bottle-2_400x.jpg"
-                            alt="">
+                        <div class="shop-look__infimg mb-3">
+                            <img class="img-fluid info-img__main"
+                                src="./images/Artifact-Mer-Mer-Monoi-Glossy-Mane-bottle-2_400x.jpg" alt="">
+                            <img class="img-fluid info-img__detail"
+                                src="./images/Artifact-Mer-Mer-Monoi-Glossy-Mane-bottle-packaging-2-01_300x.jpg" alt="">
+                        </div>
                         <p class="shop-look__name">MÈR-MÈR MONOÏ MILKY WAVES HAIR MIST</p>
                         <p class="shop-look__price">$31</p>
                         <a class="shop-look__btn" href="">VIEW PRODUCT</a>
@@ -298,24 +302,61 @@
             </div>
         </section>
         <section class="shop-timeline">
-            <div class="container-fluid container-lg p-5">
-                <div class="row shop-story">
-                    <div class="shop-story__img col-6">
-                        <img class="" src="./images/timeline-story_x650.jpg" alt="">
+            <div class="container-fluid container-lg py-5">
+                <div class="swiper-container timeline-slide__container">
+                    <div class="swiper-wrapper timeline-slide__wrapper">
+                        <div class="swiper-slide timeline-slide" data-name="STORY">
+                            <div class="row shop-story">
+                                <div class="shop-story__img col-6">
+                                    <img class="" src="./images/timeline-story_x650.jpg" alt="">
+                                </div>
+                                <div class="shop-story__script col-6 align-self-end p-3">
+                                    <h5>ANCIENT WISDOM</h5>
+                                    <h3>MODERN PERFORMANCE</h3>
+                                    <p>We lovingly create products that will complement and enhance the daily self-care
+                                        ritual,
+                                        using only the highest quality active ingredients and botanicals that are
+                                        effective,
+                                        high-performance and always non-toxic.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide timeline-slide" data-name="INSPIRED">
+                            <div class="row shop-story">
+                                <div class="shop-story__img col-6">
+                                    <img class="" src="./images/timeline-inspiration_x650.jpg" alt="">
+                                </div>
+                                <div class="shop-story__script col-6 align-self-end p-3">
+                                    <h5>EXPLORE THE WORLD</h5>
+                                    <h3>TO BE INSPIRED</h3>
+                                    <p>We are explorers, dreamers and makers. We travel the world in search of stories
+                                        and transform them into beautifully designed and culturally inspired skincare.We
+                                        take you all over the world, from tropical islands to the icy coast of British
+                                        Columbia, from Asia to South America and North Africa.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide timeline-slide" data-name="QUALITY">
+                            <div class="row shop-story">
+                                <div class="shop-story__img col-6">
+                                    <img class="" src="./images/timeline-quality-2_x650.jpg" alt="">
+                                </div>
+                                <div class="shop-story__script col-6 align-self-end p-3">
+                                    <h5>NATURAL</h5>
+                                    <h3>OUR GUARANTEE</h3>
+                                    <p>Our products are 99.5-100% natural. We always aim to have our products as natural
+                                        as they can be, never compromising on quality and effectiveness of the product.
+                                        Each product is infused with the elements of aroma, memory, place and beauty
+                                        traditions from across the globe.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="shop-story__script col-6 align-self-end p-3">
-                        <h5>ANCIENT WISDOM</h5>
-                        <h3>MODERN PERFORMANCE</h3>
-                        <p>We lovingly create products that will complement and enhance the daily self-care ritual,
-                            using only the highest quality active ingredients and botanicals that are effective,
-                            high-performance and always non-toxic.</p>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination timeline-pagination">
                     </div>
                 </div>
-                <div class="shop-timeline__nav d-flex justify-content-center align-items-center my-5">
-                    <div class="timeline-nav__story active mr-5">STORY</div>
-                    <div class="timeline-nav__inspiration mr-5">INSPIRATION</div>
-                    <div class="timeline-nav__quality">QUALITY</div>
-                </div>
+
             </div>
         </section>
         <section class="shop-gift">
@@ -326,7 +367,7 @@
                     <div class="shop-gift__img col-12 col-sm-6 px-lg-5">
                         <img class="img-fluid" src="./images/gift-card_600x.jpg" alt="">
                     </div>
-                    <div class="shop-gift__script col-12 col-sm-6 col-lg-4 text-sm-left align-self-center">
+                    <div class="shop-gift__script col-12 col-sm-6 col-lg-4 text-sm-left align-self-center mt-5 mt-md-0">
                         <h4 class="">THE GIFT CARD</h4>
                         <p>$50</p>
                         <hr>

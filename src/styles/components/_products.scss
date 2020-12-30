@@ -44,7 +44,7 @@
       top: 0;
       left: 0;
       height: 100%;
-      max-width: 100%;
+      width: 100%;
       object-fit: cover;
       opacity: 1;
     }
@@ -56,7 +56,7 @@
       opacity: 0;
       transition: opacity 650ms;
       height: 100%;
-      max-width: 100%;
+      width: 100%;
     }
     &:hover {
       .product-viewdetail {
@@ -77,6 +77,14 @@
       transform: translateY(0);
     }
   }
+}
+
+.product-cards {
+  display: none;
+}
+
+.product-cards.isactive {
+  display: unset;
 }
 
 .product-card.product-sold::before {
