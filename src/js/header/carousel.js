@@ -43,7 +43,7 @@ var swiper = new Swiper(".swiper-container.carousel-slide", {
       console.log("slide change end");
       var tl = anime.timeline({
         easing: "easeOutExpo",
-        duration: 1500,
+        duration: 3000,
       });
       tl.add({
         targets: ".swiper-slide-active .swiper-caption",

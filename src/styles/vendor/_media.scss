@@ -99,8 +99,22 @@
     }
   }
 
-  .shop-look__info > *:not(:last-child) {
-    display: block;
+  .swiper-container.look-slide__container {
+    height: 650px;
+  }
+
+  .swiper-slide.look-slide {
+    & > *:not(:last-child) {
+      display: initial;
+    }
+
+    .shop-look__btn {
+      width: 100%;
+    }
+  }
+
+  .swiper-pagination.look-pagination {
+    display: initial;
   }
 
   .shop-story {
@@ -109,4 +123,7 @@
   .shop-news__card:last-child {
     display: inline-block;
   }
+}
+
+@media (min-width: 1200px) {
 }

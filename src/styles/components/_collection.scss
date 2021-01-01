@@ -26,10 +26,14 @@
 
   .products-collection__info {
     position: absolute;
-    bottom: 30px;
-    left: 30px;
+    bottom: 50px;
+    left: 50px;
 
     color: #fff;
+
+    .products-collection__title {
+      letter-spacing: 5px;
+    }
 
     .products-collection__btn {
       @include button(#fff) {

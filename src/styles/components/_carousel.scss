@@ -61,18 +61,15 @@
   .swiper-caption {
     position: absolute;
 
-    height: 100px;
-
     color: #fff;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     &.swiper-caption__odd {
       text-align: left;
       left: 50px;
-      bottom: 150px;
+      bottom: 50px;
     }
 
     &.swiper-caption__even {

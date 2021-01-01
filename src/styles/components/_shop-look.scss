@@ -1,32 +1,72 @@
 .shop-look {
   border-bottom: 0.5px solid #ccc;
 }
-
-.shop-look__info > *:not(:last-child) {
-  display: none;
+.swiper-container.look-slide__container {
+  width: 100%;
+  padding: unset;
+  margin-left: 10px;
 }
 
-.shop-look__info {
+.swiper-slide.look-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 85%;
+  width: 100%;
   .shop-look__infimg {
-    height: 60%;
-    width: 100%;
     position: relative;
+    height: 100%;
+    width: 100%;
     img {
+      width: 100%;
       position: absolute;
       top: 0;
       left: 0;
+
+      cursor: pointer;
     }
     .info-img__detail {
       opacity: 0;
     }
     &:hover {
-      cursor: pointer;
       .info-img__detail {
         opacity: 1;
       }
     }
   }
+  .shop-look__name {
+    margin-bottom: unset;
+  }
+  .shop-look__price {
+    font-size: 16px;
+  }
   .shop-look__btn {
     @include button($primary-color);
+  }
+  & > *:not(:last-child) {
+    display: none;
+  }
+}
+
+.swiper-pagination.look-pagination {
+  bottom: 40px;
+  display: none;
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 1px solid #000;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #000;
   }
 }

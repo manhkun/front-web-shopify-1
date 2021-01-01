@@ -9,3 +9,4 @@ import "./header/navbar";
 import "./header/carousel";
 import "./component/products";
 import "./component/shop-timeline";
+import "./component/shop-look";
