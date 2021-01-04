@@ -1,61 +1,52 @@
-import $ from "jquery";
-import anime from "animejs/lib/anime.es.js";
+import Swiper from "swiper";
 
-$(function() {
-  $("#products-nav__masques").on("click", () => {
-    $("#products-nav__masques").addClass("nav-item__active");
-    $("#products-nav__lips").removeClass("nav-item__active");
-    $("#product-cards__masques").addClass("isactive");
-    $("#product-cards__lips").removeClass("isactive");
-    var tl = anime.timeline({
-      easing: "easeOutExpo",
-      duration: 1500,
+const product_nav = ["MASQUES", "LIPS"];
+
+var swiper = new Swiper(".swiper-container.product-slide__container", {
+  pagination: {
+    el: ".swiper-pagination.product-pagination",
+    clickable: true,
+    renderBullet: function(index, className) {
+      return (
+        '<span class="mr-5 ' + className + '">' + product_nav[index] + "</span>"
+      );
+    },
+  },
+});
+
+var konjacBtn = Array.from(
+  document.getElementsByClassName("product-fatiguedskin__color--item")
+);
+var imgDisp = document.querySelector(".product-fatiguedskin__disp");
+
+var getSiblings = function(elem) {
+  // Setup siblings array and get the first sibling
+  var siblings = [];
+  var sibling = elem.parentNode.firstChild;
+
+  // Loop through each sibling and push to the array
+  while (sibling) {
+    if (sibling.nodeType === 1 && sibling !== elem) {
+      siblings.push(sibling);
+    }
+    sibling = sibling.nextSibling;
+  }
+
+  return siblings;
+};
+
+konjacBtn.forEach((item, index) => {
+  item.addEventListener("click", (e) => {
+    item.classList.add("color-active");
+    getSiblings(item).forEach((el) => {
+      el.classList.remove("color-active");
     });
-
-    // Add children
-    tl.add({
-      targets: ".product-cards.isactive",
-      opacity: [0, 1],
-    });
-  });
-
-  $("#products-nav__lips").on("click", () => {
-    $("#products-nav__lips").addClass("nav-item__active");
-    $("#products-nav__masques").removeClass("nav-item__active");
-    $("#product-cards__lips").addClass("isactive");
-    $("#product-cards__masques").removeClass("isactive");
-  });
-  $("#pure-konjac").on("click", function(e) {
-    $(this).addClass("color-active");
-    $(this)
-      .siblings()
-      .removeClass("color-active");
-    $(".product-fatiguedskin__disp").attr(
-      "src",
-      "./images/product-fatigued1.jpg"
-    );
-    $(".product-fatiguedskin__colors--name").html("Color: Bamboo Charcoal");
-  });
-  $("#bamboo-charcoal").on("click", function(e) {
-    $(this).addClass("color-active");
-    $(this)
-      .siblings()
-      .removeClass("color-active");
-    $(".product-fatiguedskin__disp").attr(
-      "src",
-      "./images/product-fatigued2.jpg"
-    );
-    $(".product-fatiguedskin__colors--name").html("Color: Pink Clay");
-  });
-  $("#pink-clay").on("click", function(e) {
-    $(this).addClass("color-active");
-    $(this)
-      .siblings()
-      .removeClass("color-active");
-    $(".product-fatiguedskin__disp").attr(
-      "src",
-      "./images/product-fatigued3.jpg"
-    );
-    $(".product-fatiguedskin__colors--name").html("Color: Pure Konjac");
+    if (index === 0) {
+      imgDisp.setAttribute("src", "./images/product-fatigued1.jpg");
+    } else if (index === 1) {
+      imgDisp.setAttribute("src", "./images/product-fatigued2.jpg");
+    } else if (index === 2) {
+      imgDisp.setAttribute("src", "./images/product-fatigued3.jpg");
+    }
   });
 });

@@ -1,10 +1,9 @@
-import $ from "jquery";
+var navbar = document.querySelector(".navbar");
 
-$(document).scroll(function(evt) {
-  var currentTop = $(this).scrollTop();
-  if (currentTop >= 40) {
-    $(".navbar").addClass("sticky-navbar");
+document.addEventListener("scroll", function(e) {
+  if (window.scrollY >= 40) {
+    navbar.classList.add("sticky-navbar");
   } else {
-    $(".navbar").removeClass("sticky-navbar");
+    navbar.classList.remove("sticky-navbar");
   }
 });

@@ -1,16 +1,29 @@
-import $ from "jquery";
+var navlist = document.querySelector(".nav-list__inner");
+var hamburgerMenu = document.querySelector(".btn-hamburger-menu");
+var closeNavBtn = document.querySelector(".btn-nav__close");
+var openNavItemBtn = Array.from(
+  document.getElementsByClassName("btn-nav--item__open")
+);
+var closeNavItemBtn = Array.from(
+  document.getElementsByClassName("btn-nav--item__close")
+);
 
-$(function() {
-  $(".hamburger-menu").on("click", () => {
-    $(".nav-list__inner").addClass("is-expand");
+hamburgerMenu.addEventListener("click", (e) => {
+  navlist.classList.add("is-expand");
+});
+
+closeNavBtn.addEventListener("click", (e) => {
+  navlist.classList.remove("is-expand");
+});
+
+openNavItemBtn.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    item.parentElement.parentElement.classList.add("is-expand");
   });
-  $(".btn-nav__close").on("click", () => {
-    $(".nav-list__inner").removeClass("is-expand");
-  });
-  $(".btn-nav--item__open").on("click", (e) => {
-    $(".nav-list__inner--item").addClass("is-expand");
-  });
-  $(".btn-nav--item__close").on("click", () => {
-    $(".nav-list__inner--item").removeClass("is-expand");
+});
+
+closeNavItemBtn.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    item.parentElement.parentElement.classList.remove("is-expand");
   });
 });

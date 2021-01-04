@@ -1,5 +1,4 @@
 import Swiper, { Navigation, Pagination, Autoplay, EffectFade } from "swiper";
-import $ from "jquery";
 import anime from "animejs/lib/anime.es.js";
 
 Swiper.use([Navigation, Pagination, Autoplay, EffectFade]);
@@ -55,9 +54,12 @@ var swiper = new Swiper(".swiper-container.carousel-slide", {
   },
 });
 
-$(".swiper-slide").mousemove(() => {
+var swiperSlide = document.querySelector(".swiper-slide");
+
+swiperSlide.addEventListener("mousemove", (e) => {
   swiper.autoplay.stop();
 });
-$(".swiper-slide").mouseleave(() => {
+swiperSlide.addEventListener("mouseleave", (e) => {
+  console.log("start");
   swiper.autoplay.start();
 });

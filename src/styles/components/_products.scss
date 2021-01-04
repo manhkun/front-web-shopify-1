@@ -26,6 +26,9 @@
 .product-card {
   position: relative;
   height: 500px;
+  width: 24%;
+  min-width: 300px;
+  margin-right: 50px;
   &__title {
     cursor: pointer;
 
@@ -82,11 +85,47 @@
 }
 
 .product-cards {
-  display: none;
+  display: flex;
+  justify-content: space-between;
 }
 
-.product-cards.isactive {
-  display: unset;
+.swiper-container.product-slide__container {
+  .swiper-slide {
+    overflow: hidden;
+  }
+}
+
+.swiper-pagination.product-pagination {
+  position: unset;
+  margin-bottom: 70px;
+  .swiper-pagination-bullet {
+    font-size: 30px;
+    opacity: 1;
+    cursor: pointer;
+    display: unset;
+    border-radius: unset;
+    background: unset;
+
+    &::before {
+      content: "";
+      width: 0px;
+      height: 2px;
+      background-color: #000;
+
+      position: absolute;
+      bottom: -5px;
+      transition: width 300ms;
+    }
+    &.swiper-pagination-bullet-active {
+      opacity: 1;
+      position: relative;
+      background-color: unset;
+
+      &::before {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .product-card.product-sold::before {
