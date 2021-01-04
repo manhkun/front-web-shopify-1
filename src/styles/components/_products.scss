@@ -96,7 +96,7 @@
 }
 
 .swiper-pagination.product-pagination {
-  position: unset;
+  position: initial;
   margin-bottom: 70px;
   .swiper-pagination-bullet {
     font-size: 30px;
@@ -105,6 +105,7 @@
     display: unset;
     border-radius: unset;
     background: unset;
+    position: relative;
 
     &::before {
       content: "";
@@ -116,14 +117,14 @@
       bottom: -5px;
       transition: width 300ms;
     }
-    &.swiper-pagination-bullet-active {
-      opacity: 1;
-      position: relative;
-      background-color: unset;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    position: relative;
+    background-color: unset;
 
-      &::before {
-        width: 100%;
-      }
+    &::before {
+      width: 100%;
     }
   }
 }
