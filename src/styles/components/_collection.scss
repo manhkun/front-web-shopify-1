@@ -2,7 +2,6 @@
   padding-right: 0;
   padding-left: 0;
   .products-collection__img {
-    @include zoomImg;
     height: 500px;
     position: relative;
     img {

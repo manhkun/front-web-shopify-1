@@ -2,18 +2,15 @@ import $ from "jquery";
 
 $(function() {
   $(".hamburger-menu").on("click", () => {
-    $(".nav-list").addClass("open");
+    $(".nav-list__inner").addClass("is-expand");
   });
-  $(".close-btn").on("click", () => {
-    $(".nav-list").removeClass("open");
+  $(".btn-nav__close").on("click", () => {
+    $(".nav-list__inner").removeClass("is-expand");
   });
-
-  $(".expand-skincare__btn").on("click", () => {
-    $(".expand-skincare__btn").toggleClass("open");
-    $(".nav-expand__skincare").toggleClass("open");
+  $(".btn-nav--item__open").on("click", (e) => {
+    $(".nav-list__inner--item").addClass("is-expand");
   });
-  $(".expand-body__btn").on("click", () => {
-    $(".expand-body__btn").toggleClass("open");
-    $(".nav-expand__body").toggleClass("open");
+  $(".btn-nav--item__close").on("click", () => {
+    $(".nav-list__inner--item").removeClass("is-expand");
   });
 });

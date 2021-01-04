@@ -37,7 +37,7 @@ header {
   &:hover {
     background-color: $light-background;
     * {
-      color: $navigation-text-color !important;
+      color: $navigation-text-color;
     }
     .logo {
       .logo-black {
@@ -62,7 +62,7 @@ header {
     padding-right: 0;
     .item-menu__text {
       display: none;
-      margin-right: 10px;
+      margin-right: 20px;
     }
   }
   .logo {
@@ -76,67 +76,80 @@ header {
 }
 
 .navbar-bottom {
-  .nav-list {
+  .nav-list__inner {
+    list-style: none;
+    height: 100vh;
+    width: 300px;
+    background-color: #fff;
+
     position: fixed;
     top: 0;
-    left: -100%;
-    z-index: 999;
+    left: -300px;
 
-    width: 400px;
-    height: 100vh;
-
-    list-style: none;
-
-    background-color: $navigation-background;
-    transition: left 650ms;
-
-    .nav-item {
-      font-size: 16px;
+    transition: all 650ms;
+    * {
+      color: #000;
+    }
+    &--item {
       border-bottom: 0.5px solid #ccc;
-
-      padding: 20px 0px;
-
-      .nav-expand__skincare,
-      .nav-expand__body {
-        list-style: none;
-
-        max-height: 0;
-        overflow: hidden;
-
-        transition: max-height 650ms;
-
-        .nav-expand__item {
-          padding: 10px 0px;
-          opacity: 0.6;
-        }
-      }
-
-      .nav-expand__skincare.open,
-      .nav-expand__body.open {
-        max-height: 400px;
-      }
+      padding: 10px 0;
     }
   }
-
-  .nav-list.open {
+  .nav-list__inner.is-expand {
     left: 0;
   }
 }
 
-.expand-body__btn,
-.expand-skincare__btn {
-  .fa-minus {
-    display: none;
+.nav-list__inner--item {
+  margin: 20px 0;
+  .nav-list__inner--item--name {
+    display: inline;
+  }
+  .btn-nav--item__inner {
+    float: right;
+    .btn-nav--item__close {
+      display: none;
+    }
+    .btn-nav--item__open {
+      display: initial;
+    }
+  }
+  .nav-list__item-expand {
+    .expand-list {
+      list-style: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 650ms;
+
+      &__item {
+        text-transform: uppercase;
+      }
+    }
+    .expand-menu {
+      display: none;
+    }
   }
 }
 
-.expand-body__btn.open,
-.expand-skincare__btn.open {
-  .fa-plus {
-    display: none;
+.nav-list__inner--item.is-expand {
+  .btn-nav--item__inner {
+    .btn-nav--item__close {
+      display: initial;
+    }
+    .btn-nav--item__open {
+      display: none;
+    }
   }
-  .fa-minus {
-    display: initial;
+  .nav-list__item-expand {
+    padding: 10px;
+    .expand-list {
+      max-height: initial;
+
+      &__item {
+        opacity: 0.6;
+        margin: 20px 0;
+      }
+    }
   }
 }
 
